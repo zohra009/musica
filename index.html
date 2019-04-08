@@ -72,11 +72,14 @@
         // console.log(key);
         
     });
+    
+    //the remove func fires AFTER the transition to key.addEventLister fires off
     function removeTransition(e) {
         if(e.propertyName !== "transform") return; //skip it if it is not a transform
         console.log(e.propertyName);
-        
+        this.classList.remove("playing")
     }
+    
     const keys = document.querySelectorAll(".key");
     keys.forEach(key => key.addEventListener("transitionend", removeTransition
     ));
