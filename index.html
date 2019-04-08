@@ -71,14 +71,15 @@
 
         // console.log(key);
         
-    })
+    });
     function removeTransition(e) {
-        console.log(e);
+        if(e.propertyName !== "transform") return; //skip it if it is not a transform
+        console.log(e.propertyName);
         
     }
     const keys = document.querySelectorAll(".key");
-keys.forEach(key => key.addEventListener("transition", removeTransition
-));
+    keys.forEach(key => key.addEventListener("transitionend", removeTransition
+    ));
 </script>
 
 
