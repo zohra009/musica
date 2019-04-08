@@ -65,10 +65,16 @@
         if(!audio) return; //stops the function from running altogether
         audio.currentTime = 0 //rewind to the start
         audio.play()
-        console.log(key);
+        key.classList.add("playing");
+        //add transition event
+
+
+        // console.log(key);
         
     })
 
+    const keys = 
+document.querySelectorAll(".key")
 </script>
 
 
